@@ -1,5 +1,12 @@
 # 智伴 GS705B（智伴儿童机器人2）刷入小智 AI
 
+![platform](https://img.shields.io/badge/platform-ATS3605%20%2F%20ARMv7-blue)
+![os](https://img.shields.io/badge/kernel-Linux%203.10.52-lightgrey)
+![status](https://img.shields.io/badge/status-working-success)
+![license](https://img.shields.io/badge/license-MIT-green)
+
+**适用机型：智伴儿童机器人2（内部型号 GS705B，CMIIT ID 2018DP9338）**
+
 把一台 2018 年的儿童机器人，改成能自然对话的 AI 音箱。**不拆机、不烧写固件、可一键回退。**
 
 > 原理不是"刷固件"，而是**替换语音助手进程**：原厂固件完全不动（只读 squashfs），
@@ -74,11 +81,17 @@ adb shell reboot
 └── LICENSE
 ```
 
-## 六、声明
+## 六、免责声明
 
-- 本仓库**不包含任何固件二进制**。`sair` / `xwebd` 请从上游项目自行获取与编译，遵守其 MIT 许可。
-- 文中不含设备 MAC、激活码、WiFi 凭据、API token。
-- 改机有风险：刷坏需自行恢复；关键前置是**用只读 squashfs 保护原厂固件**，不要在 SYSTEM 分区写任何东西。
+- **非官方**：本项目与智伴科技（广州智伴人工智能科技有限公司）、思必驰、乐鑫官方均无关联，
+  非授权、非合作、非官方支持。
+- **商标与版权**：智伴、小智、思必驰等名称与相关标识归各自权利人所有；文中提及仅用于说明兼容性。
+- **不含固件**：本仓库不提供任何厂商固件或第三方二进制。`sair` / `xwebd` 需自行从上游
+  [moyu929/xiaozhi-zhiban](https://github.com/moyu929/xiaozhi-zhiban) 获取，并遵守其 MIT 许可。
+- **风险自负**：改机存在风险（设备变砖、数据丢失、保修失效、云端服务变更导致功能失效）。
+  请自行评估并承担后果；建议动手前先备份（见 `scripts/restore.sh`）。
+- **合规使用**：仅用于处置你本人拥有或获授权处置的设备。请勿用于绕过付费服务、规避授权或商业分发。
+- **无担保**：按 MIT 许可"AS IS"提供，作者不对任何直接或间接损失负责。
 
 ## 七、致谢
 
